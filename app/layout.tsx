@@ -3,6 +3,8 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { ReduxProvider } from '@/utils/redux/provider'
 import { MUIThemeRegistry } from '@/styles/provider'
+import TanstackQueryProvider from '@/utils/providers/TanstackQueryProvider'
+import { SWRConfigProvider } from '@/utils/providers/SWRConfigProvider'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -41,7 +43,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <MUIThemeRegistry options={{ key: 'mui' }}>
-          <ReduxProvider>{children}</ReduxProvider>
+          <ReduxProvider>
+            <SWRConfigProvider>
+              <TanstackQueryProvider>
+                <div>{children}</div>
+              </TanstackQueryProvider>
+            </SWRConfigProvider>
+          </ReduxProvider>
         </MUIThemeRegistry>
       </body>
     </html>
