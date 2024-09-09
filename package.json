@@ -21,6 +21,7 @@
     "@reduxjs/toolkit": "^2.2.7",
     "@tanstack/react-query": "^5.55.4",
     "@tanstack/react-query-devtools": "^5.55.4",
+    "firebase": "^10.13.1",
     "mongoose": "^8.6.1",
     "next": "14.2.8",
     "react": "^18",
