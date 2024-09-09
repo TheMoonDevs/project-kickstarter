@@ -1,3 +1,4 @@
+import { dmSans } from '@/utils/config/fonts/font'
 import { PaletteMode } from '@mui/material'
 
 const IS_DARK_MODE = false
@@ -41,7 +42,7 @@ const commonTheme = {
     modal: 9
   },
   typography: {
-    fontFamily: ['DM Sans', 'Roboto', '"Segoe UI"'].join(',')
+    fontFamily: [`${dmSans.style.fontFamily}`, 'Roboto', '"Segoe UI"'].join(',')
   }
 }
 
