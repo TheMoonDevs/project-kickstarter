@@ -1,4 +1,4 @@
-export const PortalSdk = {
+export const AppSdk = {
   getData: (url: string, body: any) => {
     return new Promise<any>(async (resolve, reject) => {
       try {
